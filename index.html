@@ -1380,54 +1380,77 @@
     @media (max-width: 600px) {
       .hero {
         display: grid;
-        grid-template-columns: 65% 35%;
+        grid-template-columns: 55% 45%;
         grid-template-areas:
-          "mascot left"
+          "mascot kicker"
+          "mascot h1"
+          "mascot desc"
+          "pill   desc"
+          "role   ."
+          "btn    btn"
           "right  right";
         align-items: start;
-        gap: 10px 14px;
+        gap: 6px 12px;
         text-align: left;
         padding: 40px 20px 56px;
       }
 
-      .hero-center {
-        grid-area: mascot;
-        order: 0;
-      }
-
+      /* let hero-left / hero-center's children become direct grid
+         items of .hero so each one can be placed independently */
+      .hero-center,
       .hero-left {
-        grid-area: left;
-        align-items: flex-start;
-        text-align: left;
+        display: contents;
       }
 
-      .hero-left .kicker,
+      .hero-left .kicker {
+        grid-area: kicker;
+        margin-bottom: 0;
+      }
+
+      .hero-left h1 {
+        grid-area: h1;
+        font-size: 1.7rem;
+      }
+
+      .hero-left .hero-desc {
+        grid-area: desc;
+        font-size: 0.85rem;
+        margin: 4px 0 0;
+      }
+
       .hero-left .hero-role {
+        grid-area: role;
+        font-size: 0.72rem;    /* was 0.8rem */
+        white-space: nowrap;
+        margin: 8px 0 0;
         text-align: left;
-        align-self: flex-start;
       }
 
       .btn-row {
+        grid-area: btn;
         justify-content: flex-start;
+        margin-top: 16px;
+      }
+
+      .mascot-wrap {
+        grid-area: mascot;
+        width: 80%;
+        padding-left: 30px;
+        margin: 0;
+      }
+
+      .mascot-status-pill {
+        grid-area: pill;
+        font-size: 9px;
+        padding: 4px 8px;
+        margin: 8px 0 0;
       }
 
       .hero-right {
         grid-area: right;
         max-width: none;
         width: 100%;
-        margin: 8px 0 0;
-      }
-
-      .mascot-wrap {
-        width: 100%;
-        max-width: 180px;
-        margin: 0;
-      }
-
-      .mascot-status-pill {
-        font-size: 9px;
-        padding: 4px 8px;
-        margin-top: 8px;
+        margin: 16px 0 0;
       }
     }
   </style>
