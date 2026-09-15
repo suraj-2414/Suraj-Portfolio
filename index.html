@@ -1375,6 +1375,60 @@
         display: block;
       }
     }
+
+    /* ---------- PHONE: shrink mascot & wrap it with content ---------- */
+    @media (max-width: 600px) {
+      .hero {
+        display: grid;
+        grid-template-columns: 110px 1fr;
+        grid-template-areas:
+          "mascot left"
+          "right  right";
+        align-items: start;
+        gap: 10px 14px;
+        text-align: left;
+      }
+
+      .hero-center {
+        grid-area: mascot;
+        order: 0;
+      }
+
+      .hero-left {
+        grid-area: left;
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .hero-left .kicker,
+      .hero-left .hero-role {
+        text-align: left;
+        align-self: flex-start;
+      }
+
+      .btn-row {
+        justify-content: flex-start;
+      }
+
+      .hero-right {
+        grid-area: right;
+        max-width: none;
+        width: 100%;
+        margin: 8px 0 0;
+      }
+
+      .mascot-wrap {
+        width: 100%;
+        max-width: 110px;
+        margin: 0;
+      }
+
+      .mascot-status-pill {
+        font-size: 9px;
+        padding: 4px 8px;
+        margin-top: 8px;
+      }
+    }
   </style>
 </head>
 
