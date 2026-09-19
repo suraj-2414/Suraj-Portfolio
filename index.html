@@ -246,12 +246,13 @@
 
     /* ---------- HERO SECTION (3-COLUMN CENTERED MASCOT) ---------- */
     .hero {
-      padding: 60px 0 80px;
+      padding: 60px  ;
+      margin: auto;
       display: grid;
-      grid-template-columns: 1fr 260px 1fr;
+      grid-template-columns: 1fr 200px 1fr;
       gap: 40px;
-      align-items: center;
-      min-height: 82vh;
+      align-items: center; 
+      /* min-height: 82vh; */
     }
 
     .hero-col {
@@ -267,7 +268,7 @@
 
     .mascot-wrap {
       position: relative;
-      width: 240px;
+      width: 180px;
       filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
       animation: bob 4.5s ease-in-out infinite;
       user-select: none;
@@ -550,15 +551,6 @@
     .section-inner {
       max-width: var(--max);
       margin: 0 auto;
-    }
-
-    .eyebrow {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      color: var(--coral);
-      margin: 0 0 8px;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
     }
 
     h2 {
@@ -1508,7 +1500,7 @@
       </div>
       <h1>Hi, I'm<br><span class="name-gold">Suraj Yadav</span>.</h1>
       <p class="hero-desc">Building scalable full-stack web applications &amp; real-time communication systems</p>
-      <p class="hero-role">Full-Stack Developer · React · Node · MongoDB</p>
+      <p class="hero-role">  MongoDB · Express · React · Node ·</p>
       <div class="btn-row">
         <a class="btn btn-primary" href="#projects">View Projects ↓</a>
         <a class="btn btn-ghost" href="#contact">Get In Touch</a>
@@ -1578,7 +1570,6 @@
   <!-- ABOUT SECTION -->
   <section id="about">
     <div class="wrap section-inner">
-      <p class="eyebrow">// 01. about me</p>
       <h2>Engineering Reliable, Data-Driven Applications</h2>
       <p class="section-sub">A fresher with real-world production internship experience and an obsession with clean code
         and high availability.</p>
@@ -1586,20 +1577,17 @@
       <div class="about-grid">
         <div class="about-text">
           <p>
-            I am a <strong>MERN Stack Developer</strong> and BCA Graduate (2022–2025) from Kurukshetra University.
-            During my internship at <strong>AAAM WIPRZ PRIVATE LIMITED</strong>, I worked directly on core client-facing
-            products and internal operational systems—bridging intuitive React interfaces with robust backend APIs.
+            <strong>MERN Stack Developer</strong> and BCA Graduate (2022–2025) from Kurukshetra University
+            , with hands-on internship experience at <strong>AAAM WIPRZ PRIVATE LIMITED</strong>. Skilled in React.js, JavaScript, Node.js, Express.js, MongoDB, REST APIs, and Tailwind CSS, with experience building responsive client-facing applications and internal web systems.
           </p>
           <p>
-            My experience covers building end-to-end booking funnels for car-care services, customer lead pipeline
-            management in enterprise CRMs, and real-time VoIP communication backends using <strong>Socket.IO and
-              WebRTC</strong>.
+          Hands-on experience developing end-to-end booking workflows for car-care services, CRM-based lead management systems, and real-time communication backends using <strong> Node.js, Socket.IO,</strong> and <strong> WebRTC.</strong> Experienced in building scalable APIs, managing real-time data flows, and integrating frontend applications with backend services.
           </p>
-          <p>
+          <!-- <p>
             I approach every project with clean architectural boundaries: modular React components, clean
             controller-service layers on Express, structured MongoDB schemas with Mongoose/Prisma, and defensive error
             handling.
-          </p>
+          </p> -->
         </div>
 
         <div class="about-highlights">
@@ -1660,7 +1648,7 @@
   <!-- SKILLS SECTION -->
   <section id="skills">
     <div class="wrap section-inner">
-      <p class="eyebrow">// 02. skills & toolkit</p>
+      
       <h2>Technologies I Work With</h2>
       <p class="section-sub">Cleanly organized across languages, frontend, backend engines, databases, and real-time
         networking.</p>
@@ -1763,8 +1751,7 @@
   <!-- EXPERIENCE SECTION -->
   <section id="experience">
     <div class="wrap section-inner">
-      <p class="eyebrow">// 03. experience</p>
-      <h2>Work History</h2>
+      <h2>Experience</h2>
       <p class="section-sub">Hands-on industry internship building and scaling web products.</p>
 
       <div class="timeline">
@@ -1820,7 +1807,6 @@
   <!-- PROJECTS SECTION -->
   <section id="projects">
     <div class="wrap section-inner">
-      <p class="eyebrow">// 04. featured work</p>
       <h2>Projects I've Built</h2>
       <p class="section-sub">Production applications and real-time systems engineered from the ground up.</p>
 
@@ -1945,7 +1931,6 @@
   <!-- EDUCATION & ACHIEVEMENTS SECTION -->
   <section id="education">
     <div class="wrap section-inner">
-      <p class="eyebrow">// 05. education & milestones</p>
       <h2>Academic & Competition Background</h2>
       <p class="section-sub">Formal computer science foundation complemented by competitive technical achievements.</p>
 
@@ -1987,7 +1972,6 @@
   <!-- INTERACTIVE TERMINAL SECTION -->
   <section id="terminal">
     <div class="wrap section-inner">
-      <p class="eyebrow">// 06. live developer console</p>
       <h2>Terminal Output</h2>
       <p class="section-sub">Simulating real server routines, socket rooms, and database pipelines.</p>
 
@@ -2002,20 +1986,20 @@
           <span class="mono" style="font-size:11px; color:var(--mint);">node v20.x</span>
         </div>
 
-        <div class="terminal-body" id="termBody">
-          <div class="line"><span class="prompt">&gt;</span> <span class="highlight-text">npm run start:server</span>
+       <div class="terminal-body" id="termBody">
+          <div class="line"><span class="prompt">&gt;</span> <span class="highlight-text">whoami</span>
           </div>
-          <div class="line cmd-output">[INFO] Express API gateway mounted at http://localhost:5000/api/v1</div>
-          <div class="line cmd-output">[INFO] MongoDB cluster connected successfully (Mongoose ODM ready)</div>
-          <div class="line"><span class="prompt">&gt;</span> <span class="highlight-text">socket.io --listen</span>
+          <div class="line cmd-output">[INFO] suraj_yadav -- Full-Stack Developer (MERN), fresher, actively job hunting</div>
+          <div class="line"><span class="prompt">&gt;</span> <span class="highlight-text">cat skills.json</span>
           </div>
-          <div class="line cmd-output">[SOCKET] Real-time VoIP signaling server initialized on room channels</div>
-          <div class="line cmd-output">[EVENT] Peer connection established: client_id: 88f2 -> status: connected (0ms
-            jitter)</div>
-          <div class="line"><span class="prompt">&gt;</span> <span class="highlight-text">db.leads.aggregate([{ $match:
-              { stage: 'qualified' } }])</span></div>
-          <div class="line cmd-output">[CRM] Pipeline resolved: 42 leads converted to scheduled car-care appointments
+          <div class="line cmd-output">[INFO] frontend: React, Tailwind CSS | backend: Node.js, Express | database: MongoDB</div>
+          <div class="line cmd-output">[INFO] realtime: Socket.IO, WebRTC</div>
+          <div class="line"><span class="prompt">&gt;</span> <span class="highlight-text">git log --oneline experience</span></div>
+          <div class="line cmd-output">[INFO] Internship @ AAAM WIPRZ Pvt. Ltd. -- shipped a WebRTC + Socket.IO calling system
           </div>
+          <div class="line cmd-output">[INFO] Hands-on with MERN fundamentals, REST APIs, real-time signaling, MongoDB schemas</div>
+          <div class="line"><span class="prompt">&gt;</span> <span class="highlight-text">status --availability</span></div>
+          <div class="line cmd-output">[STATUS] open_to_work: true | relocation: yes | remote: yes</div>
           <div class="line muted-line"># Suraj is available for full-time MERN Stack Developer roles. Ready to relocate
             or work remote.</div>
         </div>
@@ -2037,7 +2021,6 @@
   <!-- CONTACT SECTION -->
   <section id="contact">
     <div class="wrap section-inner">
-      <p class="eyebrow">// 07. get in touch</p>
       <h2>Let's Build Something Together</h2>
       <p class="section-sub">I'm currently seeking a full-time MERN Stack Developer opportunity as a fresher. Let's
         discuss how I can add immediate value to your engineering team.</p>
@@ -2055,7 +2038,7 @@
                 <span class="contact-label">Email</span>
                 <a href="mailto:sk0171852@gmail.com" class="contact-val">sk0171852@gmail.com</a>
               </div>
-              <button class="copy-btn" onclick="copyText('sk0171852@gmail.com', 'Email copied!')">Copy</button>
+              <!-- <button class="copy-btn" onclick="copyText('sk0171852@gmail.com', 'Email copied!')">Copy</button> -->
             </div>
 
             <div class="contact-card">
@@ -2063,7 +2046,7 @@
                 <span class="contact-label">Phone / WhatsApp</span>
                 <a href="tel:+917206269388" class="contact-val">+91 7206269388</a>
               </div>
-              <button class="copy-btn" onclick="copyText('+917206269388', 'Phone number copied!')">Copy</button>
+              <!-- <button class="copy-btn" onclick="copyText('+917206269388', 'Phone number copied!')">Copy</button> -->
             </div>
 
             <div class="contact-card">
@@ -2078,7 +2061,6 @@
 
         <!-- Quick Message Form -->
         <div class="contact-form">
-          <h3>// Send a Quick Note</h3>
           <form onsubmit="handleContactSubmit(event)">
             <div class="form-group">
               <label for="senderName">Your Name</label>
